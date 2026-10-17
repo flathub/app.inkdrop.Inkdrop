@@ -1,9 +1,9 @@
 app-id: app.inkdrop.Inkdrop
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: "25.08"
+base-version: '25.08'
 command: inkdrop
 separate-locales: false
 tags:
@@ -27,8 +27,7 @@ modules:
     build-commands:
       - install -Dm644 -t /app/share/applications inkdrop/app.inkdrop.Inkdrop.desktop
       - install -Dm644 -t /app/share/metainfo inkdrop/app.inkdrop.Inkdrop.metainfo.xml
-      - install -Dm644 inkdrop/app.inkdrop.Inkdrop.png
-        /app/share/icons/hicolor/256x256/apps/app.inkdrop.Inkdrop.png
+      - install -Dm644 inkdrop/app.inkdrop.Inkdrop.png /app/share/icons/hicolor/256x256/apps/app.inkdrop.Inkdrop.png
       - rm inkdrop/app.inkdrop.Inkdrop.*
       - cp -a inkdrop /app/inkdrop
       - install -Dm755 inkdrop.sh /app/bin/inkdrop
@@ -38,13 +37,14 @@ modules:
           - x86_64
         dest: inkdrop
         strip-components: 0
-        url: https://dist.inkdrop.app/releases/inkdrop-6.1.5-x64-linux.zip
-        sha256: 4f13c6a00cabb44d509dafa49fc7db138b16acd300e6b393715b47e10541ad23
+        url: https://dist.inkdrop.app/releases/inkdrop-6.2.0-x64-linux.zip
+        sha256: 17a96f59e12f4a6b48b15e9cb58ae14f6f5f2e733531a56ee52664c5800dca68
         x-checker-data:
           type: json
           url: https://api.inkdrop.app/download/latest
           version-query: .version
-          url-query: .links.linux[] | select(.arch == "x64" and .type == "zip") | .url
+          url-query: .links.linux[] | select(.arch == "x64" and .type == "zip") |
+            .url
           is-main-source: true
 
       - type: archive
@@ -52,13 +52,14 @@ modules:
           - aarch64
         dest: inkdrop
         strip-components: 0
-        url: https://dist.inkdrop.app/releases/inkdrop-6.1.5-arm64-linux.zip
-        sha256: 672b525bdf82015645fd4905df27dd761c25a58f39849855d4e6a9e1eb62fb73
+        url: https://dist.inkdrop.app/releases/inkdrop-6.2.0-arm64-linux.zip
+        sha256: 5f7a4e598472c162dc86ec4cc6f3a4236526f69fb035895518096431a4c46bf8
         x-checker-data:
           type: json
           url: https://api.inkdrop.app/download/latest
           version-query: .version
-          url-query: .links.linux[] | select(.arch == "arm64" and .type == "zip") | .url
+          url-query: .links.linux[] | select(.arch == "arm64" and .type == "zip")
+            | .url
 
       - type: file
         path: inkdrop.sh
