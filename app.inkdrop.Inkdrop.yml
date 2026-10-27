@@ -37,8 +37,8 @@ modules:
           - x86_64
         dest: inkdrop
         strip-components: 0
-        url: https://dist.inkdrop.app/releases/inkdrop-6.2.0-x64-linux.zip
-        sha256: 17a96f59e12f4a6b48b15e9cb58ae14f6f5f2e733531a56ee52664c5800dca68
+        url: https://dist.inkdrop.app/releases/inkdrop-6.3.0-x64-linux.zip
+        sha256: df1c58a15a1efada4a0a06b36348e2a1bd37217a041a0ac46bb498dcead4c8a1
         x-checker-data:
           type: json
           url: https://api.inkdrop.app/download/latest
@@ -52,8 +52,8 @@ modules:
           - aarch64
         dest: inkdrop
         strip-components: 0
-        url: https://dist.inkdrop.app/releases/inkdrop-6.2.0-arm64-linux.zip
-        sha256: 5f7a4e598472c162dc86ec4cc6f3a4236526f69fb035895518096431a4c46bf8
+        url: https://dist.inkdrop.app/releases/inkdrop-6.3.0-arm64-linux.zip
+        sha256: cc0d3c90f9a5df71224a69d797ff40e43f136c8da63adddc5ef898618afb91f7
         x-checker-data:
           type: json
           url: https://api.inkdrop.app/download/latest
